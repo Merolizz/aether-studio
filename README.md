@@ -1,6 +1,12 @@
 # Aether Studio
 
-Professional Creative Suite - Edit, Animation, Photo/RAW, Color, Audio
+**Qt6 tabanlı ön odak arayüzü** — Edit, Animation, Photo/RAW, Color, Audio için profesyonel kreatif paket.
+
+Qt6 ile geliştirilmiş, ön odak (front-end) arayüzüne sahip tek masaüstü uygulaması.
+
+### Description
+
+Aether Studio, **Qt6** kullanarak geliştirilmiş, video düzenleme, animasyon, fotoğraf/RAW, renk ve ses işleme için tek bir **ön odak arayüzü** sunan profesyonel kreatif pakettir. Vulkan, FFmpeg ve modern C++20 ile desteklenir.
 
 ## Building
 
@@ -37,7 +43,7 @@ The executable will be in `build/bin/`.
 ## Development
 
 This project uses:
+- **Qt6** – ana ön odak arayüzü (main front-end UI)
 - C++20
-- ImGui for UI
 - Vulkan for rendering
-- GLFW for window management
+- FFmpeg for media; ImGui/Vulkan where used
