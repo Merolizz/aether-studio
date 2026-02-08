@@ -1,0 +1,47 @@
+{
+    "configurations": [
+        {
+            "name": "x64-Debug",
+            "generator": "Ninja",
+            "configurationType": "Debug",
+            "inheritEnvironments": [ "msvc_x64_x64" ],
+            "buildRoot": "${projectDir}\\out\\build\\${name}",
+            "installRoot": "${projectDir}\\out\\install\\${name}",
+            "cmakeCommandArgs": "",
+            "buildCommandArgs": "",
+            "ctestCommandArgs": "",
+            "variables": [
+                {
+                    "name": "CMAKE_INSTALL_PREFIX",
+                    "value": "${projectDir}\\out\\install\\${name}",
+                    "type": "PATH"
+                },
+                {
+                    "name": "VULKAN_SDK",
+                    "value": "C:/VulkanSDK/1.4.335.0",
+                    "type": "STRING"
+                },
+                {
+                    "name": "FETCHCONTENT_BASE_DIR",
+                    "value": "${projectDir}\\out\\build\\${name}\\_deps",
+                    "type": "PATH"
+                },
+                {
+                    "name": "FFMPEG_ROOT",
+                    "value": "C:/ffmpeg",
+                    "type": "PATH"
+                },
+                {
+                    "name": "Qt6_ROOT",
+                    "value": "C:/Qt/6.7.0/msvc2019_64",
+                    "type": "PATH"
+                },
+                {
+                    "name": "AETHER_QT6_FRONTEND",
+                    "value": "ON",
+                    "type": "BOOL"
+                }
+            ]
+        }
+    ]
+}

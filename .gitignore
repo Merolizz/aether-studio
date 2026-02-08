@@ -1,0 +1,38 @@
+# Build directories
+build/
+bin/
+lib/
+*.exe
+*.dll
+*.lib
+*.obj
+*.o
+*.a
+
+# CMake
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+*.cmake
+!CMakeLists.txt
+
+# IDE
+.vs/
+.vscode/
+.idea/
+*.user
+*.suo
+*.sln
+*.vcxproj
+*.vcxproj.filters
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Project files
+*.aether
+
+# Large deps (install separately)
+ffmpeg/
+third_party/

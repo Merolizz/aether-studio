@@ -1,0 +1,15 @@
+#version 450
+layout(local_size_x = 8, local_size_y = 8) in;
+layout(binding = 0, rgba8) uniform readonly image2D u_input;
+layout(binding = 1, rgba8) uniform writeonly image2D u_output;
+layout(push_constant) uniform Push { vec4 lift; vec4 gamma; vec4 gain; } pc;
+void main() {
+    ivec2 uv = ivec2(gl_GlobalInvocationID.xy);
+    ivec2 size = imageSize(u_input);
+    if (uv.x >= size.x || uv.y >= size.y) return;
+    vec4 c = imageLoad(u_input, uv);
+    c = c + pc.lift;
+    c = pow(max(c, vec4(0.0001)), 1.0 / pc.gamma);
+    c = c * pc.gain;
+    imageStore(u_output, uv, clamp(c, 0.0, 1.0));
+}
