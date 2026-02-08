@@ -32,7 +32,3 @@ Thumbs.db
 
 # Project files
 *.aether
-
-# Large deps (install separately)
-ffmpeg/
-third_party/
